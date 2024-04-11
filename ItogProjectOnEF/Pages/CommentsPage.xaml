@@ -1,0 +1,38 @@
+﻿<Page x:Class="ItogProjectOnEF.Pages.CommentsPage"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ItogProjectOnEF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CommentsPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Frame Background="Wheat" x:Name="PageFrame" Grid.ColumnSpan="6" Grid.RowSpan="5"   ></Frame>
+        <DataGrid x:Name="CommentsDataGrid" Background="Wheat" Grid.ColumnSpan="3" Grid.RowSpan="5"></DataGrid>
+        <ComboBox x:Name="ProductIdCbx" Grid.Column="4"></ComboBox>
+        <TextBlock Grid.Column="3" Text="Продукт:"  FontFamily="Bahnschrift SemiLight SemiCondensed" VerticalAlignment="Center" FontSize="20" ></TextBlock>
+        <TextBox x:Name="TextTxb" Grid.Column="4" Grid.Row="1" materialDesign:HintAssist.Hint="Введите  Текст" TextAlignment="Center" FontSize="15" VerticalAlignment="Center" ></TextBox>
+        <TextBlock Grid.Column="3" Grid.Row="1" Text="Текст:"  FontFamily="Bahnschrift SemiLight SemiCondensed" VerticalAlignment="Center" FontSize="20"></TextBlock>
+        <TextBox x:Name="RatingTxb" Grid.Column="4" Grid.Row="2" materialDesign:HintAssist.Hint="Введите Рейтинг" TextAlignment="Center" FontSize="15" VerticalAlignment="Center" ></TextBox>
+        <TextBlock Grid.Column="3" Grid.Row="2" Text="Рейтинг:"  FontFamily="Bahnschrift SemiLight SemiCondensed" VerticalAlignment="Center" FontSize="20"></TextBlock>
+        <Button x:Name="Addbuton" Background="#FF4F8FE2"  Click="AddButton_Click" Grid.Column="4" Grid.Row="4" VerticalAlignment="Bottom" Content="Добавить" Cursor="Hand"  ></Button>
+    </Grid>
+</Page>
